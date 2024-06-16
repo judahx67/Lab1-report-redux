@@ -624,7 +624,7 @@ int main(int argc, char *argv[])
             printUsage(argv[0]);
         }
         auto start = std::chrono::steady_clock::now();
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 10000; i++)
         {
             encryptFile(keySize, keyFile.c_str(), ivFile.c_str(), plainTextFile.c_str(), cipherTextFile.c_str(), mode, aadFile.c_str());
         }
@@ -642,7 +642,7 @@ int main(int argc, char *argv[])
         }
         auto start = std::chrono::steady_clock::now();
 
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 10000; i++)
         {
             decryptFile(keySize, keyFile.c_str(), ivFile.c_str(), cipherTextFile.c_str(), plainTextFile.c_str(), mode, aadFile.c_str());
         }
